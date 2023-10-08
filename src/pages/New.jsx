@@ -6,13 +6,17 @@ export default function New() {
           <a href="/questions/">Questions Homepage</a>
         </h1>
       </nav>
-      <h1>New Question page</h1>
+      <h1>New MERN Stack Question</h1>
       <form action="/questions" method="POST">
         Title: <input type="text" name="title" />
         <br />
-        Entry: <input type="textarea" name="entry" />
+        Category: <input type="textarea" name="category" />
         <br />
-        Ship is Broken: <input type="checkbox" name="shipIsBroken" />
+        Ask Question/ Paste Error Message:{" "}
+        <input type="textarea" name="question" />
+        <br />
+        Check if question is about an error message{" "}
+        <input type="checkbox" name="isErrorMessage" />
         <br />
         <input type="submit" value="Create Question" />
       </form>

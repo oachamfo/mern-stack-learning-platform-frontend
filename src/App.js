@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import axios from "axios";
 import Index from "./pages/Index";
+import New from "./pages/New";
+import Edit from "./pages/Edit";
 import { getQuestions } from "./utilities/questions-service";
 
 function App() {
@@ -23,10 +25,10 @@ function App() {
   return (
     <div className="App">
       App Component
-      <Index questions={questions} />
       <Routes>
-        <Route path="/questions" element={<Index />} />
-        <Route path="/orders/new" element={<Index />} />
+        <Route path="/questions" element={<Index questions={questions} />} />
+        <Route path="/questions/new" element={<New />} />
+        <Route path="/questions/${_id}/edit" element={<Edit />} />
       </Routes>
     </div>
   );
