@@ -5,6 +5,7 @@ import axios from "axios";
 import Index from "./pages/Index";
 import New from "./pages/New";
 import Edit from "./pages/Edit";
+import Show from "./pages/Show";
 import { getQuestions } from "./utilities/questions-service";
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
       <Routes>
         <Route path="/questions" element={<Index questions={questions} />} />
         <Route path="/questions/new" element={<New />} />
-        <Route path="/questions/${_id}/edit" element={<Edit />} />
+        <Route path="questions/:id" element={<Show />} />
       </Routes>
     </div>
   );

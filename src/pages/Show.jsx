@@ -1,26 +1,40 @@
+import { useParams } from "react-router-dom";
+import { getQuestion } from "../utilities/questions-service";
+import { useState, useEffect } from "react";
 export default function Show() {
+  //useParams() gets all the parameters in a given url
+  //so we destructure {id} from the useParams object
+  const { id } = useParams();
+
+  //state to hold question
+  const [question, setQuestion] = useState();
+
+  useEffect(() => {
+    //async function inside useEffect() is used to call an imported async function and to update the state
+    const getQuestionandUpdateState = async () => {
+      const question = await getQuestion(id);
+      //set the question state with the return value of the imported getQuestion() function
+      setQuestion(question);
+      console.log(question);
+    };
+    //inside useEffect() invoke the async helper function defined in useEffect()
+    getQuestionandUpdateState();
+  }, []);
+
   function createdOn() {
     //stringify MongoDb time stamp object and return human readable date
-    const createdAtMonth = JSON.stringify(
-      props.question.createdAt.getMonth() + 1
-    );
-    const createdAtDay = JSON.stringify(props.question.createdAt.getDate());
-    const createdAtYear = JSON.stringify(
-      props.question.createdAt.getFullYear()
-    );
+    const createdAtMonth = JSON.stringify(question.createdAt.getMonth() + 1);
+    const createdAtDay = JSON.stringify(question.createdAt.getDate());
+    const createdAtYear = JSON.stringify(question.createdAt.getFullYear());
     const createdAt = createdAtMonth + "/" + createdAtDay + "/" + createdAtYear;
     return createdAt;
   }
 
   function updatedOn() {
     //stringify MongoDb time stamp object and return human readable date
-    const updatedAtMonth = JSON.stringify(
-      props.question.updatedAt.getMonth() + 1
-    );
-    const updatedAtDay = JSON.stringify(props.question.updatedAt.getDate());
-    const updatedAtYear = JSON.stringify(
-      props.question.updatedAt.getFullYear()
-    );
+    const updatedAtMonth = JSON.stringify(question?.updatedAt.getMonth() + 1);
+    const updatedAtDay = JSON.stringify(question?.updatedAt.getDate());
+    const updatedAtYear = JSON.stringify(question?.updatedAt.getFullYear());
     const updatedAt = updatedAtMonth + "/" + updatedAtDay + "/" + updatedAtYear;
     return updatedAt;
   }
@@ -33,17 +47,17 @@ export default function Show() {
         </h1>
       </nav>
       <h2>Question Show Page</h2>
-      <h1>{props?.question?.title}</h1>
-      <h2>
-        {props?.question?.isErrorMessage
+      <h1>{question?.title}</h1>
+      <b>
+        {question?.hasErrorMessage
           ? `This question has an error message the user is trying to debug.`
           : `This question does not have an error message the user is trying to debug.`}
-      </h2>
+      </b>
       <br></br>
-      <p>{props.question.question}</p>
+      <p>{question?.question}</p>
       <br></br>
-      <p>created on: {createdOn()}</p>
-      <p>updated on: {updatedOn()}</p>
+      <p>created on: {question?.createdAt}</p>
+      <p>updated on: {question?.updatedAt}</p>
     </div>
   );
 }

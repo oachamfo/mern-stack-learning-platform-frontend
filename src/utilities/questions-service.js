@@ -1,15 +1,23 @@
 import axios from "axios";
 export async function getQuestions() {
+  //fetch data
   const response = await fetch("/questions/");
-  //parse json into JS object
+  //parse data from json format to JS object
   let questions = await response.json();
-  questions = Array.from(questions);
+  //questions = Array.from(questions);
   console.log(questions);
-  /*
-  const questions = axios
-    .get("http://localhost:3001/questions")
-    .then((res) => res.json())
-    .catch((err) => console.log(err));
-  */
+
   return questions;
+}
+export async function getQuestion(id) {
+  //fetch data
+  const response = await fetch(`/questions/${id}`, {
+    mode: "no-cors",
+  });
+
+  //parse data from json format to JS object
+  let question = await response.json();
+  console.log(question);
+
+  return question;
 }

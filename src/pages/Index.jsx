@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Index({ questions }) {
   return (
     <div>
@@ -8,7 +9,8 @@ export default function Index({ questions }) {
         {questions?.map((question, i) => {
           return (
             <li key={i}>
-              <a href={`/questions/${question?._id}`}>{question?.title} </a>
+              {/* <a href={`/questions/${question?._id}`}>{question?.title} </a>*/}
+              <Link to={`/questions/${question?._id}`}>{question.title}</Link>
 
               {/* Delete form below*/}
               <form
