@@ -1,4 +1,26 @@
-export default function Edit({ question }) {
+import { useParams } from "react-router-dom";
+import { getQuestion } from "../utilities/questions-service";
+import { useState, useEffect } from "react";
+
+export default function Edit() {
+  //useParams() gets all the parameters in a given url
+  //so we destructure {id} from the useParams object
+  const { id } = useParams();
+
+  //state to hold question
+  const [question, setQuestion] = useState();
+
+  useEffect(() => {
+    //async function inside useEffect() is used to call an imported async function and to update the state
+    const getQuestionandUpdateState = async () => {
+      const question = await getQuestion(id);
+      //set the question state with the return value of the imported getQuestion() function
+      setQuestion(question);
+      console.log(question);
+    };
+    //inside useEffect() invoke the async helper function defined in useEffect()
+    getQuestionandUpdateState();
+  }, []);
   return (
     <div>
       <nav>
@@ -10,13 +32,28 @@ export default function Edit({ question }) {
       <form action={`/questions/${question?._id}?_method=PUT`} method="POST">
         Title: <input type="text" name="title" defaultValue={question?.title} />
         <br />
-        Category: <input type="textarea" name="category" />
+        Error Message: <br />
+        <textarea
+          name="errorMessage"
+          rows="4"
+          cols="50"
+          defaultValue={question?.errorMessage}
+        />
         <br />
-        Ask Question/ Paste Error Message:{" "}
-        <input type="textarea" name="question" />
+        Ask Question: <br />
+        <textarea
+          name="question"
+          rows="4"
+          cols="50"
+          defaultValue={question?.question}
+        />
         <br />
         Check if question is about an error message{" "}
-        <input type="checkbox" name="isErrorMessage" />
+        {question?.hasErrorMessage ? (
+          <input type="checkbox" name="hasErrorMessage" defaultChecked />
+        ) : (
+          <input type="checkbox" name="hasErrorMessage" />
+        )}
         <br />
         <input type="submit" value="Update Question" />
       </form>

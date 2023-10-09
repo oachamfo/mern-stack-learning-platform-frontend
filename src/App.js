@@ -29,6 +29,7 @@ function App() {
       <Routes>
         <Route path="/questions" element={<Index questions={questions} />} />
         <Route path="/questions/new" element={<New />} />
+        <Route path="/questions/:id/edit" element={<Edit />} />
         <Route path="questions/:id" element={<Show />} />
       </Routes>
     </div>
