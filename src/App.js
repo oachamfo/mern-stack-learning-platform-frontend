@@ -6,6 +6,7 @@ import Index from "./pages/Index";
 import New from "./pages/New";
 import Edit from "./pages/Edit";
 import Show from "./pages/Show";
+import Seed from "./pages/Seed";
 import { getQuestions } from "./utilities/questions-service";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/questions" element={<Index questions={questions} />} />
         <Route path="/questions/new" element={<New />} />
         <Route path="/questions/:id/edit" element={<Edit />} />
+        <Route path="questions/seed" element={<Seed />} />
         <Route path="questions/:id" element={<Show />} />
       </Routes>
     </div>
