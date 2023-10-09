@@ -10,7 +10,7 @@ export default function Index({ questions }) {
             <li key={i}>
               <a href={`/questions/${question?._id}`}>{question?.title} </a>
 
-              {/* Delete form down below*/}
+              {/* Delete form below*/}
               <form
                 action={`/questions/${question._id}?_method=DELETE`}
                 method="POST"

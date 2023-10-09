@@ -10,13 +10,14 @@ export default function New() {
       <form action="/questions" method="POST">
         Title: <input type="text" name="title" />
         <br />
-        Category: <input type="textarea" name="category" />
+        Error Message: <br />
+        <textarea name="errorMessage" rows="4" cols="50" />
         <br />
-        Ask Question/ Paste Error Message:{" "}
-        <input type="textarea" name="question" />
+        Ask Question: <br />
+        <textarea name="question" rows="4" cols="50" />
         <br />
         Check if question is about an error message{" "}
-        <input type="checkbox" name="isErrorMessage" />
+        <input type="checkbox" name="hasErrorMessage" />
         <br />
         <input type="submit" value="Create Question" />
       </form>
