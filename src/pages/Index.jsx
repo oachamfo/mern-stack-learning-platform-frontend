@@ -9,15 +9,12 @@ export default function Index({ questions }) {
         {questions?.map((question, i) => {
           return (
             <li className="index-page-question" key={i}>
-              {/*alternatively instead of React's <Link>, HTML anchor tags also works: <a href={`/questions/${question?._id}`}>{question?.title} </a>}*/}
-              {
-                <Link
-                  className="question-text"
-                  to={`/questions/${question?._id}`}
-                >
-                  {question?.title}
-                </Link>
-              }
+              <Link
+                className="question-text"
+                to={`/questions/${question?._id}`}
+              >
+                {question?.title}
+              </Link>
               {/* Delete form below*/}
               <form
                 action={`/questions/${question?._id}?_method=DELETE`}
@@ -25,8 +22,8 @@ export default function Index({ questions }) {
               >
                 <input className="button" type="submit" value="DELETE" />
               </form>
-              <a href={`/questions/${question?._id}/edit`}>Edit Question</a>{" "}
-              <a href={`/answers/${question?._id}/`}>Answer Question</a>
+              <Link to={`/questions/${question?._id}/edit`}>Edit Question</Link>{" "}
+              <Link to={`/answers/${question?._id}/`}>Answer Question</Link>
             </li>
           );
         })}
