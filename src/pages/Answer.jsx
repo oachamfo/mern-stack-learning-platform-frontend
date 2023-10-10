@@ -46,7 +46,7 @@ export default function Answer() {
           Answer: <br />
           <textarea type="text" name="answer" rows="4" cols="50" />
           <br />
-          <input type="submit" value="Create Answer" />
+          <input className="button" type="submit" value="Create Answer" />
         </form>
       </div>
     </div>

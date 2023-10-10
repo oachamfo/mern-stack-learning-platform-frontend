@@ -30,6 +30,7 @@ function App() {
     <div className="App">
       App Component
       <Routes>
+        <Route path="/" element={<Index questions={questions} />} />
         <Route path="/questions" element={<Index questions={questions} />} />
         <Route path="/questions/new" element={<New />} />
         <Route path="/questions/:id/edit" element={<Edit />} />

@@ -18,15 +18,47 @@
 .App-link {
   color: #61dafb;
 }
-
+body {
+  background-color: white;
+}
+.index-page-question {
+  margin: 50px;
+}
 ul {
   list-style: none;
 }
-a {
+a,
+a:visited,
+a:hover,
+a:active {
+  color: darkblue;
+  font-size: larger;
+  font-weight: bold;
   text-decoration: none;
+  border: none;
+  margin: 5px;
 }
+a:hover {
+  font-size: 150%;
+}
+a.question-text {
+  color: purple;
+}
+.button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  margin: 10px;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 16px;
+}
+
 .question {
-  background-color: cyan;
+  background-color: whitesmoke;
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
@@ -34,7 +66,7 @@ a {
   align-self: center;
 }
 .answers {
-  background-color: darkcyan;
+  background-color: #0abab5;
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;

@@ -19,7 +19,7 @@ export default function New() {
         Check if question is about an error message{" "}
         <input type="checkbox" name="hasErrorMessage" />
         <br />
-        <input type="submit" value="Create Question" />
+        <input className="button" type="submit" value="Create Question" />
       </form>
     </div>
   );

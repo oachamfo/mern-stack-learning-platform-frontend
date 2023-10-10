@@ -55,7 +55,7 @@ export default function Edit() {
           <input type="checkbox" name="hasErrorMessage" />
         )}
         <br />
-        <input type="submit" value="Update Question" />
+        <input className="button" type="submit" value="Update Question" />
       </form>
     </div>
   );
