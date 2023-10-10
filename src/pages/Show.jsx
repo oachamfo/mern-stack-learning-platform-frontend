@@ -21,24 +21,6 @@ export default function Show() {
     getQuestionandUpdateState();
   }, []);
 
-  function createdOn() {
-    //stringify MongoDb time stamp object and return human readable date
-    const createdAtMonth = JSON.stringify(question.createdAt.getMonth() + 1);
-    const createdAtDay = JSON.stringify(question.createdAt.getDate());
-    const createdAtYear = JSON.stringify(question.createdAt.getFullYear());
-    const createdAt = createdAtMonth + "/" + createdAtDay + "/" + createdAtYear;
-    return createdAt;
-  }
-
-  function updatedOn() {
-    //stringify MongoDb time stamp object and return human readable date
-    const updatedAtMonth = JSON.stringify(question?.updatedAt.getMonth() + 1);
-    const updatedAtDay = JSON.stringify(question?.updatedAt.getDate());
-    const updatedAtYear = JSON.stringify(question?.updatedAt.getFullYear());
-    const updatedAt = updatedAtMonth + "/" + updatedAtDay + "/" + updatedAtYear;
-    return updatedAt;
-  }
-
   return (
     <div>
       <nav>
