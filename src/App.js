@@ -7,6 +7,7 @@ import New from "./pages/New";
 import Edit from "./pages/Edit";
 import Show from "./pages/Show";
 import Seed from "./pages/Seed";
+import Answer from "./pages/Answer";
 import { getQuestions } from "./utilities/questions-service";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       const questions = await getQuestions();
       //set the questions state with the return value of the imported getQuestions() function
       setQuestions(questions);
+      console.log(questions);
     };
     //inside useEffect() invoke the async helper function defined in useEffect()
     getQuestionsandUpdateState();
@@ -33,6 +35,7 @@ function App() {
         <Route path="/questions/:id/edit" element={<Edit />} />
         <Route path="questions/seed" element={<Seed />} />
         <Route path="questions/:id" element={<Show />} />
+        <Route path="answers/:id" element={<Answer />} />
       </Routes>
     </div>
   );

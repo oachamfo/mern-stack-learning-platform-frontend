@@ -24,6 +24,7 @@ export default function Index({ questions }) {
                 <input type="submit" value="DELETE" />
               </form>
               <a href={`/questions/${question?._id}/edit`}>Edit Question</a>
+              <a href={`/answers/${question?._id}/`}>Answer Question</a>
             </li>
           );
         })}
