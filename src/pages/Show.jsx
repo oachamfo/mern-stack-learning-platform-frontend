@@ -46,18 +46,32 @@ export default function Show() {
           <a href="/questions/">Questions Homepage</a>
         </h1>
       </nav>
-      <h2>Question Show Page</h2>
-      <h1>{question?.title}</h1>
-      <b>
-        {question?.hasErrorMessage
-          ? `This question has an error message the user is trying to debug.`
-          : `This question does not have an error message the user is trying to debug.`}
-      </b>
-      <br></br>
-      <p>{question?.question}</p>
-      <br></br>
-      <p>created on: {question?.createdAt}</p>
-      <p>updated on: {question?.updatedAt}</p>
+      <div className="question">
+        <h2>Question Show Page</h2>
+        <h1>{question?.title}</h1>
+        <b>
+          {question?.hasErrorMessage
+            ? `This question has an error message the user is trying to debug.`
+            : `This question does not have an error message the user is trying to debug.`}
+        </b>
+        <br></br>
+        <p>{question?.question}</p>
+        <br></br>
+        <p>created on: {question?.createdAt}</p>
+        <p>updated on: {question?.updatedAt}</p>
+      </div>
+      <div className="answers">
+        <h2>Answers</h2>
+        <br />
+        {question?.answers.map((answer, i) => {
+          return (
+            <div key={i} className="answer">
+              <h3>Answer # {i + 1}</h3>
+              {answer?.answer}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

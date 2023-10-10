@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .App-header {
@@ -19,4 +21,29 @@
 
 ul {
   list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.question {
+  background-color: cyan;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5px;
+  align-self: center;
+}
+.answers {
+  background-color: darkcyan;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5px;
+  align-self: center;
+}
+.answer {
+  width: 100vw;
+  text-align: left;
+  margin: 10px;
+  padding: 5px;
 }
