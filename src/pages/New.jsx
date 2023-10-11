@@ -9,7 +9,7 @@ export default function New() {
       </nav>
       <h1>New MERN Stack Question</h1>
       <form
-        action="https://mern-stack-questionandanswer-frontend.onrender.com/questions"
+        action="https://mern-stack-questionandanswer-backend.onrender.com/questions"
         method="POST"
       >
         Title: <input type="text" name="title" />
