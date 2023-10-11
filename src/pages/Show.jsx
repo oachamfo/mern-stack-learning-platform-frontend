@@ -30,7 +30,7 @@ export default function Show() {
         </h1>
       </nav>
       <div className="question">
-        <h2>Question Show Page</h2>
+        <h2>Question</h2>
         <h1>{question?.title}</h1>
         <b>
           {question?.hasErrorMessage

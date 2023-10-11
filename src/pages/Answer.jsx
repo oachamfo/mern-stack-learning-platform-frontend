@@ -30,7 +30,7 @@ export default function Answer() {
           <Link to="/questions/">Questions Homepage</Link>
         </h1>
       </nav>
-      <h2>Answer Question Show Page</h2>
+      <h2>Answer Question</h2>
       <h1>{question?.title}</h1>
       <b>
         {question?.hasErrorMessage
