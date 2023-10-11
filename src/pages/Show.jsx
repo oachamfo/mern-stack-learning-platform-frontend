@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { getQuestion } from "../utilities/questions-service";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import moment from "moment/moment";
 export default function Show() {
   //useParams() gets all the parameters in a given url
   //so we destructure {id} from the useParams object
@@ -41,8 +42,14 @@ export default function Show() {
         <p>{question?.errorMessage}</p>
         <p>{question?.question}</p>
         <br></br>
-        <p>created on: {question?.createdAt}</p>
-        <p>updated on: {question?.updatedAt}</p>
+        <p>
+          created on:{" "}
+          {moment(question?.createdAt).format("MMMM Do YYYY, h:mm:ss a")}
+        </p>
+        <p>
+          updated on:{" "}
+          {moment(question?.updatedAt).format("MMMM Do YYYY, h:mm:ss a")}
+        </p>
       </div>
       <div className="answers">
         <h2>Answers</h2>
@@ -51,7 +58,11 @@ export default function Show() {
           return (
             <div key={i} className="answer">
               <h3>Answer # {i + 1}</h3>
-              {answer?.answer}
+              <p>
+                created on:{" "}
+                {moment(answer?.createdAt).format("MMMM Do YYYY, h:mm:ss a")}
+              </p>
+              <p className="answer-text"> {answer?.answer}</p>
             </div>
           );
         })}

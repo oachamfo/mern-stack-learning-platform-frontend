@@ -9,9 +9,6 @@
   font: xx-large;
 }
 
-.App-link {
-  color: #61dafb;
-}
 body {
   background-color: white;
 }
@@ -72,4 +69,7 @@ a.question-text {
   text-align: left;
   margin: 10px;
   padding: 5px;
+}
+.answer-text {
+  font-size: medium;
 }
