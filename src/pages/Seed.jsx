@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 export default function Seed() {
   return (
     <div>
       <nav>
         <h1>
-          <a href="/questions/">Questions Homepage</a>
+          <Link to={"/questions/"}>Questions Homepage</Link>
         </h1>
       </nav>
       ;

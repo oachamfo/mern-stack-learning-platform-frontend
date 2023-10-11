@@ -26,7 +26,7 @@ export default function Edit() {
     <div>
       <nav>
         <h1>
-          <Link to="/questions/">Questions Homepage</Link>
+          <Link to={"/questions/"}>Questions Homepage</Link>
         </h1>
       </nav>
       <h1>Edit MERN Stack Question</h1>

@@ -4,7 +4,7 @@ export default function New() {
     <div>
       <nav>
         <h1>
-          <Link to="/questions/">Questions Homepage</Link>
+          <Link to={"/questions/"}>Questions Homepage</Link>
         </h1>
       </nav>
       <h1>New MERN Stack Question</h1>

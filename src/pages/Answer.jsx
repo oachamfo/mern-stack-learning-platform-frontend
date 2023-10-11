@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { getQuestion } from "../utilities/questions-service";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Answer() {
   //useParams() gets all the parameters in a given url
@@ -26,7 +27,7 @@ export default function Answer() {
     <div>
       <nav>
         <h1>
-          <a href="/questions/">Questions Homepage</a>
+          <Link to="/questions/">Questions Homepage</Link>
         </h1>
       </nav>
       <h2>Answer Question Show Page</h2>

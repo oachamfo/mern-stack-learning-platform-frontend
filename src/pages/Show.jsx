@@ -26,7 +26,7 @@ export default function Show() {
     <div>
       <nav>
         <h1>
-          <Link href="/questions/">Questions Homepage</Link>
+          <Link to={"/questions/"}>Questions Homepage</Link>
         </h1>
       </nav>
       <div className="question">
