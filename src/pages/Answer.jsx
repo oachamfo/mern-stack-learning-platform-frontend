@@ -43,7 +43,10 @@ export default function Answer() {
       <p>created on: {question?.createdAt}</p>
       <p>updated on: {question?.updatedAt}</p>
       <div>
-        <form action={`/answers/${question?._id}`} method="POST">
+        <form
+          action={`https://mern-stack-questionandanswer-backend.onrender.com/answers/${question?._id}`}
+          method="POST"
+        >
           Answer: <br />
           <textarea type="text" name="answer" rows="4" cols="50" />
           <br />
