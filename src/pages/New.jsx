@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 export default function New() {
   return (
     <div>
       <nav>
         <h1>
-          <a href="/questions/">Questions Homepage</a>
+          <Link to="/questions/">Questions Homepage</Link>
         </h1>
       </nav>
       <h1>New MERN Stack Question</h1>

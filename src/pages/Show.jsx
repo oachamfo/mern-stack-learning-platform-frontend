@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { getQuestion } from "../utilities/questions-service";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 export default function Show() {
   //useParams() gets all the parameters in a given url
   //so we destructure {id} from the useParams object
@@ -25,7 +26,7 @@ export default function Show() {
     <div>
       <nav>
         <h1>
-          <a href="/questions/">Questions Homepage</a>
+          <Link href="/questions/">Questions Homepage</Link>
         </h1>
       </nav>
       <div className="question">
