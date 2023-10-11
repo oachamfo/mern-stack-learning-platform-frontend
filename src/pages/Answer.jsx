@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { getQuestion } from "../utilities/questions-service";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import moment from "moment/moment";
 
 export default function Answer() {
   //useParams() gets all the parameters in a given url
@@ -40,8 +41,15 @@ export default function Answer() {
       <br></br>
       <p>{question?.question}</p>
       <br></br>
-      <p>created on: {question?.createdAt}</p>
-      <p>updated on: {question?.updatedAt}</p>
+      <p>
+        created on:{" "}
+        {moment(question?.createdAt).format("MMMM Do YYYY, h:mm:ss a")}
+      </p>
+      <p>
+        updated on:{" "}
+        {moment(question?.updatedAt).format("MMMM Do YYYY, h:mm:ss a")}
+      </p>
+
       <div>
         <form
           action={`https://mern-stack-questionandanswer-backend.onrender.com/answers/${question?._id}`}
