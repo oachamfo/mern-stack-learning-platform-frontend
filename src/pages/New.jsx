@@ -8,7 +8,10 @@ export default function New() {
         </h1>
       </nav>
       <h1>New MERN Stack Question</h1>
-      <form action="/questions" method="POST">
+      <form
+        action="https://mern-stack-questionandanswer-frontend.onrender.com/questions"
+        method="POST"
+      >
         Title: <input type="text" name="title" />
         <br />
         Error Message: <br />
