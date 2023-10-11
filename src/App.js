@@ -28,7 +28,6 @@ function App() {
 
   return (
     <div className="App">
-      App Component
       <Routes>
         <Route path="/" element={<Index questions={questions} />} />
         <Route path="/questions" element={<Index questions={questions} />} />

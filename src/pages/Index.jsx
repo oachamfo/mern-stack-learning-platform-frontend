@@ -3,7 +3,9 @@ export default function Index({ questions }) {
   return (
     <div>
       <nav>
-        <Link to={"/questions/new"}>Create a New Question</Link>
+        <div className="create-a-new-question">
+          <Link to={"/questions/new"}>Create a New Question</Link>
+        </div>
       </nav>
       <ul>
         {questions?.map((question, i) => {
