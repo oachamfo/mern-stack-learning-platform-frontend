@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Introduction:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a full stack MERN application. It is a platform for asking MERN stack questions. Users
+can submit their error messages and get responses back from other users as to how to debug or
+resolve the error message as well as ask general theoretical questions about the coding in the
+MERN ecosystem. The idea is to provide the user with a relevant and ideally nothing but one consolidated response that will expedite the process of resolving errors in the debugging process.
 
-## Available Scripts
+# Technologies Used:
 
-In the project directory, you can run:
+In the backend some of the primary installs included mongodb, mongoose, express, cors, and dotenv. The mongodb install provides functionality for the backend application to communicate with the db. Mongoose is an ODM that allows for a cleaner syntax by allowing properties of documents in the db to be accessed as if the documents were JS objects. Express is a web framework that runs in the Node.js environment and consumes data from the db and serves the data to the client. Cors is an npm package that allows the server to provide resources to clients from another origin (cross origin resource sharing), and dotenv allows for values in the dotenv file to be accessed using variables in the code. In the frontend, React, a JS frontend library was used in its framework form through Create React App, via the command npx create-react-app, with npx being the wizard, that is to say the installer. The npx create-react-app app serves as the client to the backend Express server and also serves as the UI for the user.
 
-### `npm start`
+# Getting Started:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Links to the project's deployed app:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend Github repo:
 
-### `npm test`
+https://github.com/oachamfo/mern-stack-learning-platform-backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend Github repo:
 
-### `npm run build`
+https://github.com/oachamfo/mern-stack-learning-platform-frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Unsolved Problems:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The frontend deploys to Render and Github Pages, but behaves in a quirky way than it does on the localhost.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Future Enhancements:
 
-### `npm run eject`
+Some future features and enhancements planned for the project is to include a search feature and AI into the program to target the responses. In contrast to major platforms like StarkOverflow, the idea is to reduce the number of responses and ideally return a single response that will get as close as possible to the ultimate truth for the user's needs. The philosophy is to use AI, and to a broader scope, machine learning based on statistical models to provide an ultimate source of truth instead of a hundred different ways of doing one thing. If a user searches for an error message or asks a question, providing numerous responses is overwhelming. Ideally, there is but the truth, and the truth is only one, and if not, in the meantime, the best top three responses will suffice, but not the ideal. Even in giving a few variety in responses to the user, there has to be one platform that is a single source of truth that aggregates data for there to be more harmony in the MERN ecosystem. The concept is to scope the world wide web, and be that platform that provides that consolidated single source of truth and return to the user that one targeted ultimate response.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# User Stories:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+As a user, I want other users to answer my questions and be able to answer theirs,
+while taking back questions I asked by deleting them, and make changes
+to a question if I get an afterthought by editing.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I can create a question.
+I can read a question.
+I can edit a question.
+I can delete a question.
+I can answer a question.
