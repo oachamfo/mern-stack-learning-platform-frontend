@@ -14,10 +14,7 @@ export async function getQuestions() {
 export async function getQuestion(id) {
   //fetch data
   const response = await fetch(
-    `https://mern-stack-questionandanswer-backend.onrender.com/questions/${id}`,
-    {
-      mode: "no-cors",
-    }
+    `https://mern-stack-questionandanswer-backend.onrender.com/questions/${id}`
   );
 
   //parse data from json format to JS object
