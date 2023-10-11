@@ -19,7 +19,7 @@ export default function Index({ questions }) {
               </Link>
               {/* Delete form below*/}
               <form
-                action={`/questions/${question?._id}?_method=DELETE`}
+                action={`https://mern-stack-questionandanswer-backend.onrender.com/questions/${question?._id}?_method=DELETE`}
                 method="POST"
               >
                 <input className="button" type="submit" value="DELETE" />

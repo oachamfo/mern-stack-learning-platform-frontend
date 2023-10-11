@@ -30,7 +30,10 @@ export default function Edit() {
         </h1>
       </nav>
       <h1>Edit MERN Stack Question</h1>
-      <form action={`/questions/${question?._id}?_method=PUT`} method="POST">
+      <form
+        action={`https://mern-stack-questionandanswer-backend.onrender.com/questions/${question?._id}?_method=PUT`}
+        method="POST"
+      >
         Title: <input type="text" name="title" defaultValue={question?.title} />
         <br />
         Error Message: <br />
